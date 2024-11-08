@@ -1,0 +1,169 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "oldInfo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newInfo",
+						"type": "string"
+					}
+				],
+				"name": "DataActualizada",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "nuevoDato",
+						"type": "string"
+					}
+				],
+				"name": "actualizarData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numeroDeCambios",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "nuevoAdmin",
+						"type": "address"
+					}
+				],
+				"name": "transferirAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "[Juan Ignacio Ferrando]",
+			"kind": "dev",
+			"methods": {
+				"actualizarData(string)": {
+					"details": "Emitir el evento `DataActualizada` cuando se modifique el valor de `storedData`.Incrementar el contador de cambios después de actualizar la información.",
+					"params": {
+						"nuevoDato": "El nuevo dato que será almacenado. TODO: Implementar la funcionalidad de esta función."
+					}
+				},
+				"constructor": {
+					"details": "Constructor que asigna el rol de administrador al creador del contrato y establece un valor inicial para `storedData`."
+				},
+				"obtenerData()": {
+					"returns": {
+						"_0": "El dato almacenado en la variable de estado `storedData`. TODO: Implementar esta función para devolver el dato almacenado."
+					}
+				},
+				"transferirAdmin(address)": {
+					"details": "Solo el administrador actual puede llamar a esta función. TODO: Completar la función para permitir la transferencia de la propiedad.",
+					"params": {
+						"nuevoAdmin": "La dirección del nuevo administrador."
+					}
+				}
+			},
+			"title": "Registro con Acceso Controlado y Eventos (Versión incompleta)",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"actualizarData(string)": {
+					"notice": "Permite al administrador actualizar el dato almacenado."
+				},
+				"obtenerData()": {
+					"notice": "Devuelve el dato almacenado actualmente."
+				},
+				"transferirAdmin(address)": {
+					"notice": "Permite al administrador transferir su rol a otro usuario."
+				}
+			},
+			"notice": "Este contrato permite almacenar y actualizar una cadena de texto, con control de acceso y eventos.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Ejercicio.sol": "RegistroConAcceso"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Ejercicio.sol": {
+			"keccak256": "0xa6961d9c7b584fdb7fcea430af9d820b6acecd186f9b275d72225fac3de11b7f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://819d6a050270eeca12742f5ec8fe444eb79cfcecdd5dc159a88b5ad6e8c7a8f9",
+				"dweb:/ipfs/QmaCtGAUXk81wzVYRojAnMEEK3oLyj8ZahGquB5RGjQLwv"
+			]
+		}
+	},
+	"version": 1
+}

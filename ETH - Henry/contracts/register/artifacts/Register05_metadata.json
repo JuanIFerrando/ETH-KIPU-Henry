@@ -1,0 +1,112 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {
+				"getInfo()": {
+					"details": "retrieves the string of the state variable `storedInfo`",
+					"returns": {
+						"_0": "the stored string"
+					}
+				},
+				"setInfo(string)": {
+					"details": "require msg.sender is the owner, otherwise send an error message",
+					"params": {
+						"myInfo": "the new string to store"
+					}
+				}
+			},
+			"title": "Concepts: require owner",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getInfo()": {
+					"notice": "Return the stored string"
+				},
+				"setInfo(string)": {
+					"notice": "Store `myInfo` Require that the account sending the transaction is the contract owner. If not, exits returning an error message.  If require is valid, continue execution."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Register05.sol": "Register05"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Register05.sol": {
+			"keccak256": "0xbdd5ffd555b196be182a8493643e4a91209a65165338168592754198c959a862",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://46594d092ce0eb62a97e65ba169fb3f832e92efe614ad334a7d27cd8837eb6ae",
+				"dweb:/ipfs/QmYrLRdUE8XG3YKrLoWHbvmrDXff3bh1jRJvT3owJEvSjM"
+			]
+		}
+	},
+	"version": 1
+}

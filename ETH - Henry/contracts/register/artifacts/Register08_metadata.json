@@ -1,0 +1,144 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "oldInfo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newInfo",
+						"type": "string"
+					}
+				],
+				"name": "InfoChange",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "countChanges",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {
+				"getInfo()": {
+					"details": "retrieves the string of the state variable `storedInfo`",
+					"returns": {
+						"_0": "the stored string"
+					}
+				},
+				"setInfo(string)": {
+					"details": "emit InfoChange with oldInfo, newInfoIncrease the counter",
+					"params": {
+						"myInfo": "the new string to store"
+					}
+				}
+			},
+			"title": "Concepts: All together 1",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getInfo()": {
+					"notice": "Return the stored string"
+				},
+				"setInfo(string)": {
+					"notice": "Store `myInfo` Use the function modifier onlyOwner to check the require condition Emit athe event InfoChange when the storedInfo will be updated Manage how many times storedInfo is updated"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Register08-All.sol": "Register08"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Register08-All.sol": {
+			"keccak256": "0x82128a620d861e26a43a04ad5e661a0d285e79555b5584b934b60e1dd1cde562",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d36e1dda0727b00162f2765efec0900b54f971f043a935e632876d6f30cdbedc",
+				"dweb:/ipfs/QmYyWnLpR2XyVgxf3NeNYVhJ4gQHfmPEwGcW7YCPWVA1u1"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "info",
+								"type": "string"
+							},
+							{
+								"internalType": "enum Register13.Colors",
+								"name": "color",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "countChanges",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Register13.InfoStruct",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Register13.Colors",
+						"name": "myColor",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {
+				"getInfo()": {
+					"details": "return the struct storedInfo",
+					"returns": {
+						"_0": "the stored struct storedInfo"
+					}
+				},
+				"setInfo(uint8,string)": {
+					"details": "update the strict `storedInfo` with the parameters `myColor` and `myInfo`increase the counter",
+					"params": {
+						"myColor": "the new color to store",
+						"myInfo": "the new string to store"
+					}
+				}
+			},
+			"title": "Concepts: struct",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getInfo()": {
+					"notice": "Return the struct storedInfo"
+				},
+				"setInfo(uint8,string)": {
+					"notice": "Store `myColor` and `myInfo` Increase the counter which how many times storedInfo is updated"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Register13_1.sol": "Register13"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Register13_1.sol": {
+			"keccak256": "0xce71c8f64607849df95307baf184449b9859332ce9f0885bd69cb49f659e3ae8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://764b63e3c6c816fcbb9ee288d154f2be710348a543590e9498e71d0009c229f8",
+				"dweb:/ipfs/QmNySmALiihsfpPg8xK4eewF5HRayX12nq8kZb5R8yu9ht"
+			]
+		}
+	},
+	"version": 1
+}

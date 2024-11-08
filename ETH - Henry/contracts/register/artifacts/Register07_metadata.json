@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "oldInfo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newInfo",
+						"type": "string"
+					}
+				],
+				"name": "InfoChange",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {
+				"getInfo()": {
+					"details": "retrieves the string of the state variable `storedInfo`",
+					"returns": {
+						"_0": "the stored string"
+					}
+				},
+				"setInfo(string)": {
+					"details": "emit InfoChange with oldInfo, newInfo",
+					"params": {
+						"myInfo": "the new string to store"
+					}
+				}
+			},
+			"title": "Concepts: event",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getInfo()": {
+					"notice": "Return the stored string"
+				},
+				"setInfo(string)": {
+					"notice": "Store `myInfo` Emit athe event InfoChange when the storedInfo will be updated"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Register07.sol": "Register07"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Register07.sol": {
+			"keccak256": "0xd4ace9cb439b9bf221c856d73e56e0cbe828f3f55555cc3a1758716b8fda6d3d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://446357304a2964d4c97a55d270f23e2add5ca6dfe435b9779e8838edc80b2c43",
+				"dweb:/ipfs/QmNkF9hsa9Pnfw6JjBbuZfEsvbeukHxxvt9AjrEx2BBeEw"
+			]
+		}
+	},
+	"version": 1
+}

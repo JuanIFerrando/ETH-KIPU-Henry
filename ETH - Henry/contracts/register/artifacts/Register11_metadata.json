@@ -1,0 +1,175 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "member",
+						"type": "address"
+					}
+				],
+				"name": "addMember",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "member",
+						"type": "address"
+					}
+				],
+				"name": "delMember",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whiteList",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {
+				"addMember(address)": {
+					"details": "update value true to the address in the whitelist",
+					"params": {
+						"member": "is the adddress to be allowed"
+					}
+				},
+				"delMember(address)": {
+					"details": "update value false to the address in the whitelist",
+					"params": {
+						"member": "is the adddress to be unallowed"
+					}
+				},
+				"getInfo()": {
+					"details": "retrieves the string of the state variable `storedInfo`",
+					"returns": {
+						"_0": "the stored string"
+					}
+				},
+				"setInfo(string)": {
+					"details": "function modifier onlyWhitelist",
+					"params": {
+						"myInfo": "the new string to store"
+					}
+				}
+			},
+			"title": "Concepts: mapping and access control: whiteList",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addMember(address)": {
+					"notice": "`Add` an address in the whitelist It means that the address will have `True` value, saing that it is in the whiteList"
+				},
+				"delMember(address)": {
+					"notice": "`Remove` an address in the whitelist It means that the address will have `False` value, saing that it is NOT in the whiteList When an index is not explicity setted, the default value is false."
+				},
+				"getInfo()": {
+					"notice": "Return the stored string"
+				},
+				"setInfo(string)": {
+					"notice": "Store `myInfo` Use the function modifier onlyWhitelist to check the require condition. _ continue the function code"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Register11.sol": "Register11"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Register11.sol": {
+			"keccak256": "0xbd67e892302d3de4c936c9cdb88eeea4b83f5a7b1452df8850bd88bf984ffc44",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c7aa0d55ceef0d2bc0ed2234995b84308cd0e178f744966712126518e09b6f56",
+				"dweb:/ipfs/QmVnNXyF2nHXSwHwySLwZhyRUyxWBS1BaRoJTeAUb3iLVo"
+			]
+		}
+	},
+	"version": 1
+}

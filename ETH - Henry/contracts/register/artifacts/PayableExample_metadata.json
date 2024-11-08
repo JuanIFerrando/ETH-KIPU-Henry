@@ -1,0 +1,177 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Received",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Sent",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "depositWithMessage",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendEther",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "Este contrato es una implementación educativa para explicar el uso de funciones `payable`  en Solidity. Permite que el contrato reciba y envíe Ether, incluyendo un monto inicial al desplegarse.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Esta función se ejecuta solo una vez al momento de desplegar el contrato. El modificador `payable` permite que el constructor reciba Ether durante el despliegue."
+				},
+				"depositWithMessage()": {
+					"details": "Esta función permite a un remitente enviar Ether y almacenar un mensaje. Es `payable`  para que pueda aceptar Ether."
+				},
+				"getBalance()": {
+					"returns": {
+						"_0": "uint256 El saldo en wei almacenado en este contrato"
+					}
+				},
+				"sendEther(address,uint256)": {
+					"details": "Esta función envía Ether a una dirección indicada. Verifica que el contrato tenga suficiente balance.",
+					"params": {
+						"amount": "La cantidad de Ether a enviar (en wei)",
+						"recipient": "La dirección de la cuenta de destino"
+					}
+				}
+			},
+			"title": "PayableExample",
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"Received(address,uint256)": {
+					"notice": "Evento que se emite cuando se recibe Ether en el contrato"
+				},
+				"Sent(address,uint256)": {
+					"notice": "Evento que se emite cuando se envía Ether desde el contrato"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Constructor que recibe Ether al desplegar el contrato"
+				},
+				"depositWithMessage()": {
+					"notice": "Función para recibir Ether con un mensaje asociado"
+				},
+				"getBalance()": {
+					"notice": "Consulta el saldo de Ether almacenado en el contrato"
+				},
+				"sendEther(address,uint256)": {
+					"notice": "Enviar Ether desde el contrato a una dirección específica"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/register/Payable.sol": "PayableExample"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/register/Payable.sol": {
+			"keccak256": "0x2fac0fc9d7e720894e83515c865e7f02bbf2a7abe0a6c1146849a1f45ff5c33b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff0c0b9bfa612d1c44dd7dafdc0affcc6e5fa7807a5517fbb9923f379f7b3848",
+				"dweb:/ipfs/QmTsXuawqVXJe92j5aCGKBRPpQtiCRovc4NyaRCVpJF5sS"
+			]
+		}
+	},
+	"version": 1
+}
