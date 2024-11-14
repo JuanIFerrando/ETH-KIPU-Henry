@@ -54,6 +54,24 @@ contract Counter is ICounter {
     }
 }
 
+contract Counter10 is ICounter {
+    uint256 private count;
+
+
+    constructor() {
+        count = 0;
+    }
+
+
+    function increment() external override {
+        count += 10;
+    }
+
+    function getCount() external view override returns (uint256) {
+        return count;
+    }
+}
+
 /**
  * @title CounterUser
  * @dev Contrato que interactúa con un contrato contador utilizando la interfaz ICounter.
