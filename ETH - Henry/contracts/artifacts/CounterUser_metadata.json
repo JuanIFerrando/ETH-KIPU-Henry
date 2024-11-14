@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ICounter",
+						"name": "_counterContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "counterContract",
+				"outputs": [
+					{
+						"internalType": "contract ICounter",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCounterValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "incrementCounter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Contrato que interactúa con un contrato contador utilizando la interfaz ICounter.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Constructor que recibe la dirección de un contrato que implementa ICounter.",
+					"params": {
+						"_counterContract": "Dirección del contrato contador."
+					}
+				},
+				"getCounterValue()": {
+					"returns": {
+						"_0": "El valor actual del contador."
+					}
+				}
+			},
+			"title": "CounterUser",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getCounterValue()": {
+					"notice": "Obtiene el valor actual del contador desde el contrato `Counter`."
+				},
+				"incrementCounter()": {
+					"notice": "Llama a la función `increment` del contrato contador. Incrementa el valor del contador en el contrato `Counter`."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/Interface.sol": "CounterUser"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/Interface.sol": {
+			"keccak256": "0x8672220e708bfebbcae70eed26fab2d2d15dfce130ce7c40cd93e180819a47f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3a9b02a220e34a2ef4e54427899128ed461c8e29a5c7e6f336c7e86667701852",
+				"dweb:/ipfs/QmWn2pYw71Bz2gvoAdYPjdUZnaMEU1xqdaQimJYeKBgFf6"
+			]
+		}
+	},
+	"version": 1
+}

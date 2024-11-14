@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Implementación de un contrato contador que sigue la interfaz ICounter. Permite incrementar un contador y obtener su valor.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Constructor que inicializa el contador en cero."
+				},
+				"getCount()": {
+					"returns": {
+						"_0": "El valor actual del contador. Implementación de la función `getCount` de la interfaz ICounter."
+					}
+				}
+			},
+			"title": "Counter",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getCount()": {
+					"notice": "Obtiene el valor actual del contador."
+				},
+				"increment()": {
+					"notice": "Incrementa el valor del contador en 1. Implementación de la función `increment` de la interfaz ICounter."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ETH - Henry/contracts/Interface.sol": "Counter"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ETH - Henry/contracts/Interface.sol": {
+			"keccak256": "0x8672220e708bfebbcae70eed26fab2d2d15dfce130ce7c40cd93e180819a47f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3a9b02a220e34a2ef4e54427899128ed461c8e29a5c7e6f336c7e86667701852",
+				"dweb:/ipfs/QmWn2pYw71Bz2gvoAdYPjdUZnaMEU1xqdaQimJYeKBgFf6"
+			]
+		}
+	},
+	"version": 1
+}
