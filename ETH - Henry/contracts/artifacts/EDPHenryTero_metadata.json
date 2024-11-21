@@ -602,11 +602,11 @@
 			]
 		},
 		"ETH - Henry/contracts/ERC20.sol": {
-			"keccak256": "0xe242e969dd7a1753f4f4aae07767c05db4ae48210a67700b79663a6cfa7888f4",
+			"keccak256": "0x7cf782430a6400496da038ded14d3a4015c8f4bec754222d2d554b06d08d6707",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ea1bb6da6a255461cecdfa79a1074dd1bb2570ebffac1e0f7a24f0e02f139766",
-				"dweb:/ipfs/QmR759pgcaVgpWdGnfn6bxRtP2FXH8cPf4hfN25zjwvZut"
+				"bzz-raw://a66046d837654a0cac18777c86d2d2a2e1187c2e6ef79509ee416555a519f238",
+				"dweb:/ipfs/QmP3phJndHSppkSjqwcfrfuZcHniXSmP2mbWJhCPSp94bx"
 			]
 		}
 	},

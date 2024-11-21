@@ -17,3 +17,4 @@ contract EDPHenryTero is ERC20, Ownable {
         _mint(to, amount);
     }
 }
+// Hacer un token estandar en ERC20
