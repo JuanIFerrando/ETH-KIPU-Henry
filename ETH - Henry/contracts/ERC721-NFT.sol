@@ -42,3 +42,4 @@ contract Teroo is ERC721, ERC721URIStorage, Ownable {
     }
 }
 // Primer prueba salio bien pero no se ve la imagen.
+// Segunda prueba salio bien todo.
