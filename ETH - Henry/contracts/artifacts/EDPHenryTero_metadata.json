@@ -539,7 +539,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ETH - Henry/contracts/ERC20.sol": "EDPHenryTero"
+			"ETH - Henry/contracts/ERC20-Token.sol": "EDPHenryTero"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -601,7 +601,7 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"ETH - Henry/contracts/ERC20.sol": {
+		"ETH - Henry/contracts/ERC20-Token.sol": {
 			"keccak256": "0x7cf782430a6400496da038ded14d3a4015c8f4bec754222d2d554b06d08d6707",
 			"license": "MIT",
 			"urls": [
