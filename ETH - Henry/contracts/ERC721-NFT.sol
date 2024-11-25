@@ -15,7 +15,7 @@ contract Tero is ERC721, ERC721URIStorage, Ownable {
         Ownable(initialOwner)
     {}
 
-    function safeMint(address to, string memory uri) public onlyOwner {
+    function rewardItem(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
