@@ -41,3 +41,4 @@ contract Tero is ERC721, ERC721URIStorage, Ownable {
         return super.supportsInterface(interfaceId);
     }
 }
+// Primer prueba salio bien pero no se ve la imagen.
