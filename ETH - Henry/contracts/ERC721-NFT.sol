@@ -7,11 +7,11 @@ import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @custom:security-contact teritojr@gmail.com
-contract Tero is ERC721, ERC721URIStorage, Ownable {
+contract Teroo is ERC721, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("Tero", "TERO")
+        ERC721("Teroo", "TERO")
         Ownable(initialOwner)
     {}
 
