@@ -894,11 +894,11 @@
 			]
 		},
 		"ETH - Henry/contracts/ERC721-NFT.sol": {
-			"keccak256": "0x2bd6c2a5f4858b302b23ee961b70348952cf84ec23a7dbfb43bbfa160ab82d98",
+			"keccak256": "0xdc99c2c7084cf19402d84b6f79671414a157f4f2a900f9d450153385d140cc2c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0b84eac78ea27c921532545fa0ecb5c1da7299562d3e004a30fb1c89ce226b23",
-				"dweb:/ipfs/QmVCmMdYnWeDhrwRZszhCKNVSg3st9EFT8DnEwx86W5kNm"
+				"bzz-raw://76cd0d2c1dc42fdf908ef486f8d16d542ba2b2dcb2b97bb21e5dca045d4d856b",
+				"dweb:/ipfs/QmR3mdy7p1K3FbEsSksZgtTNXfJt1BkdLCXs1nM3gg3aKn"
 			]
 		}
 	},
