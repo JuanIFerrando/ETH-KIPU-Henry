@@ -281,11 +281,11 @@
 			]
 		},
 		"ETH - Henry/contracts/Trabajo-Final-Mod-3/AuctionPlatform.sol": {
-			"keccak256": "0x80f89d1cdd2fd1db657f2e759db92ab8dcf612ec947f30933cabaecc956d81ee",
+			"keccak256": "0x6f3aa8031f12cff6b67d5a9301e6d1a1b64a96ee9364c67f617e540ec4ce2845",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dba23de63afef1bdacb4c8a89dc1f6e87776cf39a1231a65211930c7e3b74380",
-				"dweb:/ipfs/QmVTBq4AzxCmHTKELxKed2ZcwScbkhL14SaQdjxqsNb1Gd"
+				"bzz-raw://f812a3a0a40bb718b19b4bc16912823937f2868d17d3321c4b14a81e7b0a05e7",
+				"dweb:/ipfs/QmYzFvcPnP9vcVwi5nezp8oXb8ZBTYnUZqBdqpRPRLZFbc"
 			]
 		}
 	},

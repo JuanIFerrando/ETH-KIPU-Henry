@@ -65,46 +65,52 @@ function createAuction(uint256 tokenId, uint256 duration) external {
 
     // Función para realizar una oferta en una subasta.
     function placeBid(uint256 auctionId, uint256 bidAmount) external {
-        Auction storage auction = auctions[auctionId]; // Obtiene los detalles de la subasta.
-        require(block.timestamp < auction.endTime, "Auction has ended"); // Verifica que la subasta no haya finalizado.
-        require(auction.active, "Auction is not active"); // Verifica que la subasta esté activa.
-        require(bidAmount > auction.highestBid, "Bid must be higher than current highest bid"); // Verifica que la oferta sea mayor a la actual.
+    Auction storage auction = auctions[auctionId]; // Obtiene los detalles de la subasta.
+    
+    require(block.timestamp < auction.endTime, "Auction has ended"); // Verifica que la subasta no haya finalizado.
+    require(auction.active, "Auction is not active"); // Verifica que la subasta esté activa.
+    require(bidAmount > auction.highestBid, "Bid must be higher than current highest bid"); // Verifica que la oferta sea mayor a la actual.
 
-        // TODO: Transferir tokens del ofertante al contrato de subastas.
-        // auctionToken.transferFrom(********);
+    // Transferir tokens del ofertante al contrato de subastas
+    auctionToken.transferFrom(msg.sender, address(this), bidAmount);
 
-        // TODO: Reembolsar al ofertante anterior si hubo una oferta previa.
-        if (auction.highestBidder != address(0)) {
-            // auctionToken.transfer(**************);
-        }
-
-        // TODO: Actualizar los datos de la subasta con la nueva oferta.
-        auction.highestBid = bidAmount;
-        auction.highestBidder = msg.sender;
-
-        // TODO: Emitir un evento para registrar la nueva oferta.
-        
+    // Reembolsar al ofertante anterior si hubo una oferta previa
+    if (auction.highestBidder != address(0)) {
+        auctionToken.transfer(auction.highestBidder, auction.highestBid);
     }
+
+    // Actualizar los datos de la subasta con la nueva oferta
+    auction.highestBid = bidAmount;
+    auction.highestBidder = msg.sender;
+
+    // Emitir un evento para registrar la nueva oferta
+    emit NewBid(auctionId, msg.sender, bidAmount);
+}
 
     // Función para finalizar una subasta.
     function endAuction(uint256 auctionId) external {
-        Auction storage auction = auctions[auctionId]; // Obtiene los detalles de la subasta.
-        require(block.timestamp >= auction.endTime, "Auction has not ended yet"); // Verifica que la subasta haya finalizado.
-        require(auction.active, "Auction is not active"); // Verifica que la subasta esté activa.
+    Auction storage auction = auctions[auctionId]; // Obtiene los detalles de la subasta.
+    
+    require(block.timestamp >= auction.endTime, "Auction has not ended yet"); // Verifica que la subasta haya finalizado.
+    require(auction.active, "Auction is not active"); // Verifica que la subasta esté activa.
 
-        auction.active = false; // Marca la subasta como inactiva.
+    auction.active = false; // Marca la subasta como inactiva.
 
-        if (auction.highestBidder != address(0)) {
-            // TODO: Transferir el NFT al ganador.
-            // auctionNFT.transferFrom(*******);
+    if (auction.highestBidder != address(0)) {
+        // Transferir el NFT al ganador
+        auctionNFT.transferFrom(address(this), auction.highestBidder, auction.tokenId);
 
-            // TODO: Transferir el monto ofertado al vendedor.
-            // auctionToken.transfer(***********);
-        } else {
-            // TODO: Devolver el NFT al vendedor si no hubo ofertas.
-            // auctionNFT.transferFrom(***********);
-        }
+        // Transferir los tokens ERC-20 al vendedor
+        auctionToken.transfer(auction.seller, auction.highestBid);
 
-        // TODO: Emitir un evento para registrar que la subasta ha finalizado.
+        // Emitir un evento indicando el final de la subasta con ganador
+        emit AuctionEnded(auctionId, auction.highestBidder, auction.highestBid);
+    } else {
+        // Devolver el NFT al vendedor si no hubo ofertas
+        auctionNFT.transferFrom(address(this), auction.seller, auction.tokenId);
+
+        // Emitir un evento indicando el final de la subasta sin ofertas
+        emit AuctionEnded(auctionId, address(0), 0);
     }
+}
 }
