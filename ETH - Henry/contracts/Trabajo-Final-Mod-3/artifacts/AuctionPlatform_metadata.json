@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.22+commit.4fc1097e"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -244,7 +244,7 @@
 		"compilationTarget": {
 			"ETH - Henry/contracts/Trabajo-Final-Mod-3/AuctionPlatform.sol": "AuctionPlatform"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
